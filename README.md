@@ -17,4 +17,5 @@ assets/style.css   all styles
 assets/site.js     hero animation, terminal typing, scroll reveals, counters
 assets/logo.png    current Renku OS wordmark
 assets/seal.svg    favicon
+assets/shots/      screenshots from renkuos.org/screenshots (full size + thumbnails)
 ```

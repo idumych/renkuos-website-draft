@@ -20,6 +20,7 @@
       <a class="brand" href="#top" aria-label="Renku OS home"><img src="assets/logo.png" alt="Renku OS" width="600" height="201"></a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" aria-label="Main">
+        <a href="#screenshots">Screenshots</a>
         <a href="#verses">Why Renku</a>
         <a href="#name">The name</a>
         <a href="#hardware">Hardware</a>
@@ -46,7 +47,7 @@
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16" /></svg>
               Download nightly
             </a>
-            <a class="btn btn-ghost" href="https://github.com/RenkuOS/PlanAndGovernance/blob/main/CONTRIBUTING.md">Add your verse →</a>
+            <a class="btn btn-ghost" href="#screenshots">See it running →</a>
           </div>
           <p class="motto" aria-label="Connect, Create, Continue"><span>Connect</span><i></i><span>Create</span><i></i><span>Continue</span></p>
         </div>
@@ -94,6 +95,46 @@
         <div class="stat reveal"><b data-count="70" data-pad="5">00070</b><span>the latest nightly build number</span></div>
         <div class="stat reveal"><b data-count="2">2</b><span>ISO flavours: x86_64 and x86_gcc2h</span></div>
       </div>
+    </section>
+
+    <!-- SCREENSHOTS -->
+    <section class="gallery" id="screenshots">
+      <div class="wrap">
+        <header class="sec-head row reveal">
+          <div>
+            <p class="label">画 · On screen</p>
+            <h2>See it running.</h2>
+          </div>
+          <p class="gallery-note">Real screenshots of Renku OS, shared by the people building and using it.</p>
+        </header>
+
+        <figure class="stage reveal">
+          <button class="stage-frame" id="stage-open" aria-label="View full size">
+            <img id="stage-img" src="assets/shots/desktop-1.webp" alt="Renku OS desktop with a spreadsheet, a PDF and the Deskbar" width="1280" height="719">
+          </button>
+          <figcaption>
+            <span class="stage-count" id="stage-count">01 / 09</span>
+            <b id="stage-title">Desktop overview</b>
+            <span id="stage-desc">A working day: a spreadsheet, a PDF and the Deskbar, all on the classic BeOS desktop.</span>
+          </figcaption>
+        </figure>
+
+        <ul class="thumbs" id="thumbs">
+          <li><button aria-current="true" data-src="assets/shots/desktop-1.webp" data-w="1280" data-h="719" data-title="Desktop overview" data-desc="A working day: a spreadsheet, a PDF and the Deskbar, all on the classic BeOS desktop." data-alt="Renku OS desktop with a spreadsheet, a PDF and the Deskbar"><img src="assets/shots/desktop-1-thumb.webp" alt="" loading="lazy"><span>Desktop</span></button></li>
+          <li><button data-src="assets/shots/display-settings.webp" data-w="1024" data-h="600" data-title="Display settings" data-desc="Screen preferences on an NVIDIA Tegra 2 machine, with GLTeapot spinning beside them." data-alt="Screen preferences and GLTeapot on Renku OS"><img src="assets/shots/display-settings-thumb.webp" alt="" loading="lazy"><span>Display</span></button></li>
+          <li><button data-src="assets/shots/xbox-controller.webp" data-w="1024" data-h="600" data-title="Xbox controller via Bluetooth" data-desc="A wireless Xbox controller paired over Bluetooth, with live stick and button input." data-alt="Xbox Wireless Controller test window connected over Bluetooth"><img src="assets/shots/xbox-controller-thumb.webp" alt="" loading="lazy"><span>Bluetooth</span></button></li>
+          <li><button data-src="assets/shots/games-snes.webp" data-w="1280" data-h="720" data-title="SNES game launcher" data-desc="A full-screen game launcher running on a small portable machine." data-alt="Photo of a small device showing a SNES game launcher"><img src="assets/shots/games-snes-thumb.webp" alt="" loading="lazy"><span>Games</span></button></li>
+          <li><button data-src="assets/shots/gobe-productive-1.webp" data-w="906" data-h="604" data-title="GoBe Productive" data-desc="The classic BeOS office suite’s word processor, running on Renku." data-alt="GoBe Productive word processor"><img src="assets/shots/gobe-productive-1-thumb.webp" alt="" loading="lazy"><span>Office</span></button></li>
+          <li><button data-src="assets/shots/email-views-neo.webp" data-w="1280" data-h="941" data-title="EmailViewsNeo" data-desc="A native mail client with folders, filters and preferences." data-alt="EmailViewsNeo mail client"><img src="assets/shots/email-views-neo-thumb.webp" alt="" loading="lazy"><span>Mail</span></button></li>
+          <li><button data-src="assets/shots/powerplay.webp" data-w="1280" data-h="615" data-title="PowerPlay" data-desc="A skinnable media player with a playlist and a ten-band equalizer." data-alt="PowerPlay media player with equalizer and playlist"><img src="assets/shots/powerplay-thumb.webp" alt="" loading="lazy"><span>Media</span></button></li>
+          <li><button data-src="assets/shots/haiku-softphone-2.webp" data-w="1024" data-h="600" data-title="Haiku Softphone" data-desc="A native SIP softphone sitting on the desktop." data-alt="Haiku Softphone on the Renku OS desktop"><img src="assets/shots/haiku-softphone-2-thumb.webp" alt="" loading="lazy"><span>Phone</span></button></li>
+          <li><button data-src="assets/shots/desktop-5.webp" data-w="511" data-h="545" data-title="App launcher" data-desc="The Deskbar menu opening preferences, apps and Telegram." data-alt="Deskbar launcher menu on Renku OS"><img src="assets/shots/desktop-5-thumb.webp" alt="" loading="lazy"><span>Launcher</span></button></li>
+        </ul>
+      </div>
+      <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <form method="dialog"><button class="lb-close" aria-label="Close">×</button></form>
+        <img id="lb-img" alt="">
+      </dialog>
     </section>
 
     <!-- VERSES / features -->

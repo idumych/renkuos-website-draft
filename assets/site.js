@@ -101,6 +101,41 @@
     })();
   }
 
+  // Screenshot gallery
+  var thumbs = document.querySelectorAll("#thumbs button");
+  var stageImg = document.getElementById("stage-img");
+  var current = 0;
+  function show(i) {
+    current = (i + thumbs.length) % thumbs.length;
+    var b = thumbs[current];
+    thumbs.forEach(function (t) { t.removeAttribute("aria-current"); });
+    b.setAttribute("aria-current", "true");
+    document.getElementById("stage-title").textContent = b.dataset.title;
+    document.getElementById("stage-desc").textContent = b.dataset.desc;
+    document.getElementById("stage-count").textContent =
+      String(current + 1).padStart(2, "0") + " / " + String(thumbs.length).padStart(2, "0");
+    stageImg.classList.add("swap");
+    var next = new Image();
+    next.onload = function () {
+      stageImg.src = b.dataset.src; stageImg.alt = b.dataset.alt;
+      stageImg.width = b.dataset.w; stageImg.height = b.dataset.h;
+      stageImg.classList.remove("swap");
+    };
+    next.src = b.dataset.src;
+  }
+  thumbs.forEach(function (b, i) { b.addEventListener("click", function () { show(i); }); });
+  document.getElementById("thumbs").addEventListener("keydown", function (e) {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    show(current + (e.key === "ArrowRight" ? 1 : -1));
+    thumbs[current].focus(); e.preventDefault();
+  });
+  var lb = document.getElementById("lightbox"), lbImg = document.getElementById("lb-img");
+  document.getElementById("stage-open").addEventListener("click", function () {
+    lbImg.src = stageImg.src; lbImg.alt = stageImg.alt;
+    if (lb.showModal) lb.showModal(); else window.open(stageImg.src);
+  });
+  lb.addEventListener("click", function (e) { if (e.target === lb || e.target === lbImg) lb.close(); });
+
   // Scroll reveals and stat counters
   var els = document.querySelectorAll(".reveal");
   if (!("IntersectionObserver" in window) || reduce) {
