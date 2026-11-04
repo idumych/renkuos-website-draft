@@ -17,14 +17,6 @@
     if (e.target.tagName === "A") { nav.classList.remove("open"); toggle.setAttribute("aria-expanded", false); }
   });
 
-  // Deskbar clock
-  var clock = document.getElementById("clock");
-  function tick() {
-    var d = new Date();
-    clock.textContent = String(d.getHours()).padStart(2, "0") + ":" + String(d.getMinutes()).padStart(2, "0");
-  }
-  tick(); setInterval(tick, 30000);
-
   // Constellation: verses (nodes) linked to their neighbours, drawn once.
   var canvas = document.getElementById("constellation");
   var ctx = canvas.getContext("2d");

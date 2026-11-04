@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -21,11 +21,11 @@
       <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" aria-label="Main">
         <a class="nav-download" href="#download">Download</a>
+        <a href="#dispatches">What’s new</a>
         <a href="#screenshots">Screenshots</a>
         <a href="#verses">Why Renku</a>
         <a href="#name">The name</a>
         <a href="#hardware">Hardware</a>
-        <a href="#dispatches">News</a>
         <a href="#community">Community</a>
         <a href="https://github.com/RenkuOS/Source">Source</a>
       </nav>
@@ -40,58 +40,15 @@
       <div class="hero-kanji" aria-hidden="true">連句</div>
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="kicker"><span class="dot"></span><span id="hero-build">Nightly builds</span> · x86_64 &amp; x86_gcc2h</p>
+          <p class="kicker"><span class="dot"></span><span><span id="hero-build">Nightly builds</span> · x86_64 &amp; x86_gcc2h</span></p>
           <h1>An operating system, written&nbsp;one&nbsp;<span class="ink-fire">verse</span> at a&nbsp;time.</h1>
           <p class="lead">Renku OS is a fork of Haiku built by many hands. It keeps everything that makes BeOS fast and pleasant to use, and welcomes modern tooling, AI-assisted code and anyone who wants to add the next line.</p>
           <div class="actions">
-            <a class="btn btn-fire" href="#download">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16" /></svg>
-              Download nightly
-            </a>
+            <a class="btn btn-ghost" href="#dispatches">What’s new</a>
             <a class="btn btn-ghost" href="#screenshots">See it running</a>
           </div>
           <p class="motto" aria-label="Connect, Create, Continue"><span>Connect</span><i></i><span>Create</span><i></i><span>Continue</span></p>
         </div>
-
-        <!-- BeOS-style desktop vignette -->
-        <div class="desk" aria-hidden="true">
-          <div class="bwin bwin-editor">
-            <div class="btab"><span class="bclose"></span>Hello.cpp — Pe</div>
-            <pre class="bbody code"><span class="c">// The Be API: still a joy, thirty years on.</span>
-<span class="k">#include</span> <span class="s">&lt;Application.h&gt;</span>
-<span class="k">#include</span> <span class="s">&lt;Window.h&gt;</span>
-
-<span class="k">class</span> <span class="t">Verse</span> : <span class="k">public</span> <span class="t">BWindow</span> {
-<span class="k">public</span>:
-  Verse()
-    : <span class="t">BWindow</span>(<span class="t">BRect</span>(<span class="n">100</span>, <span class="n">100</span>, <span class="n">520</span>, <span class="n">360</span>),
-        <span class="s">"Renku"</span>, B_TITLED_WINDOW,
-        B_QUIT_ON_WINDOW_CLOSE) {}
-};
-
-<span class="k">int</span> main() {
-  <span class="t">BApplication</span> app(<span class="s">"application/x-vnd.Renku-Verse"</span>);
-  (<span class="k">new</span> Verse)-&gt;Show();
-  app.Run();
-}</pre>
-          </div>
-          <div class="bwin bwin-term">
-            <div class="btab"><span class="bclose"></span>Terminal</div>
-            <pre class="bbody term"><span class="p">~&gt; </span>uname -o
-Renku
-<span class="p">~&gt; </span>git clone https://github.com/RenkuOS/Source
-Cloning into 'Source'... done.
-<span class="p">~&gt; </span>cd Source &amp;&amp; git checkout -b my-first-verse
-Switched to a new branch 'my-first-verse'
-<span class="p">~&gt; </span></pre>
-          </div>
-          <div class="deskbar">
-            <span class="deskbar-leaf"></span>
-            <span>Pe</span><span>Terminal</span><span class="clock" id="clock">12:00</span>
-          </div>
-        </div>
-      </div>
-      <div class="wrap">
         <div id="download" class="panel">
           <div class="panel-head">
             <h2>Latest nightly</h2>
@@ -111,18 +68,49 @@ Switched to a new branch 'my-first-verse'
               <a class="btn btn-fire" href="https://github.com/RenkuOS/Source/releases/tag/nightly">Download ISO</a>
             </li>
           </ul>
-          <p class="panel-foot"><b>Not a release, so expect breakage.</b> Automated testing only checks that each image boots under emulation. Verify a download with <code>sha256sum -c RenkuOS-*.iso.sha256</code></p>
+          <p class="panel-foot"><b>Not a release, so expect breakage.</b> Automated testing only checks that each image boots under emulation. Verify a download with: <code>sha256sum -c RenkuOS-*.iso.sha256</code></p>
         </div>
       </div>
     </section>
 
-    <!-- STATS / hanko seals -->
-    <section class="stats" id="stats">
-      <div class="wrap stats-grid">
-        <div class="stat"><b>150</b><span>pull requests merged in the first two months</span></div>
-        <div class="stat"><b>15</b><span>contributors and counting</span></div>
-        <div class="stat"><b id="stat-build">00071</b><span id="stat-build-label">a recent nightly build number</span></div>
-        <div class="stat"><b>2</b><span>ISO flavours: x86_64 and x86_gcc2h</span></div>
+    <!-- QUICK LINKS -->
+    <nav class="quick" aria-label="Quick links">
+      <div class="wrap quick-inner">
+        <a href="https://github.com/RenkuOS/Source/issues">Report a bug</a>
+        <a href="https://github.com/RenkuOS/Source/blob/main/ReadMe.Compiling.md">Compiling guide</a>
+        <a href="https://github.com/RenkuOS/Source">Source code</a>
+        <a href="https://github.com/RenkuOS/Source/pulls">Pull requests</a>
+        <a href="https://renkuos.org/software">Software</a>
+        <a href="https://spritzdepot.desktoponfire.com/">Spritz Depot</a>
+        <a href="https://forum.desktoponfire.com/t/renku-os">Forum</a>
+        <a href="https://t.me/RenkuOS">Telegram</a>
+      </div>
+    </nav>
+
+    <!-- DISPATCHES -->
+    <section class="dispatches" id="dispatches">
+      <div class="wrap">
+        <header class="sec-head row">
+          <div>
+            <p class="label">便り · Dispatches</p>
+            <h2>What’s new.</h2>
+          </div>
+          <a class="text-link" href="https://www.desktoponfire.com/category/renkuos/">All posts on Desktop on Fire →</a>
+        </header>
+        <div class="news-grid">
+          <div>
+            <div class="changes-head"><h3>Recent changes</h3><a class="text-link" href="https://github.com/RenkuOS/Source/pulls?q=is%3Apr+is%3Amerged+sort%3Aupdated-desc">All merged →</a></div>
+            <ul class="rows" id="changes-list">
+              <li><a href="https://github.com/RenkuOS/Source/pulls?q=is%3Apr+is%3Amerged+sort%3Aupdated-desc">See the latest merged pull requests on GitHub</a></li>
+            </ul>
+          </div>
+          <a class="dispatch" href="https://www.desktoponfire.com/renkuos/1035/renkuos-150-pull-requests-haiku-fork/">
+          <time datetime="2026-10-31">31 Oct 2026</time>
+          <h3>150 pull requests in two months for the Haiku fork</h3>
+          <p>The first progress report for Renku OS: 150 merged pull requests from 15 contributors in two months, plus new drivers for Chromebooks, MacBooks and the Raspberry Pi 4.</p>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+        </div>
       </div>
     </section>
 
@@ -137,6 +125,7 @@ Switched to a new branch 'my-first-verse'
           <p class="gallery-note">Real screenshots of Renku OS, shared by the people building and using it.</p>
         </header>
 
+        <div class="gallery-body">
         <figure class="stage">
           <button class="stage-frame" id="stage-open" aria-label="View full size">
             <img id="stage-img" src="../assets/shots/desktop-1.webp" alt="Renku OS desktop with a spreadsheet, a PDF and the Deskbar" width="1280" height="719">
@@ -159,11 +148,22 @@ Switched to a new branch 'my-first-verse'
           <li><button data-src="../assets/shots/haiku-softphone-2.webp" data-w="1024" data-h="600" data-title="Haiku Softphone" data-desc="A native SIP softphone sitting on the desktop." data-alt="Haiku Softphone on the Renku OS desktop"><img src="../assets/shots/haiku-softphone-2-thumb.webp" alt="" loading="lazy"><span>Phone</span></button></li>
           <li><button data-src="../assets/shots/desktop-5.webp" data-w="511" data-h="545" data-title="App launcher" data-desc="The Deskbar menu opening preferences, apps and Telegram." data-alt="Deskbar launcher menu on Renku OS"><img src="../assets/shots/desktop-5-thumb.webp" alt="" loading="lazy"><span>Launcher</span></button></li>
         </ul>
+        </div>
       </div>
       <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
         <form method="dialog"><button class="lb-close" aria-label="Close">×</button></form>
         <img id="lb-img" alt="">
       </dialog>
+    </section>
+
+    <!-- STATS / hanko seals -->
+    <section class="stats" id="stats">
+      <div class="wrap stats-grid">
+        <div class="stat"><b>150</b><span>pull requests merged in the first two months</span></div>
+        <div class="stat"><b>15</b><span>contributors and counting</span></div>
+        <div class="stat"><b id="stat-build">00071</b><span id="stat-build-label">a recent nightly build number</span></div>
+        <div class="stat"><b>2</b><span>ISO flavours: x86_64 and x86_gcc2h</span></div>
+      </div>
     </section>
 
     <!-- VERSES / features -->
@@ -254,33 +254,6 @@ Switched to a new branch 'my-first-verse'
       </div>
     </section>
 
-    <!-- DISPATCHES -->
-    <section class="dispatches" id="dispatches">
-      <div class="wrap">
-        <header class="sec-head row">
-          <div>
-            <p class="label">便り · Dispatches</p>
-            <h2>News from the project.</h2>
-          </div>
-          <a class="text-link" href="https://www.desktoponfire.com/category/renkuos/">All posts on Desktop on Fire →</a>
-        </header>
-        <div class="news-grid">
-          <div>
-            <div class="changes-head"><h3>Recent changes</h3><a class="text-link" href="https://github.com/RenkuOS/Source/pulls?q=is%3Apr+is%3Amerged+sort%3Aupdated-desc">All merged →</a></div>
-            <ul class="rows" id="changes-list">
-              <li><a href="https://github.com/RenkuOS/Source/pulls?q=is%3Apr+is%3Amerged+sort%3Aupdated-desc">See the latest merged pull requests on GitHub</a></li>
-            </ul>
-          </div>
-          <a class="dispatch" href="https://www.desktoponfire.com/renkuos/1035/renkuos-150-pull-requests-haiku-fork/">
-          <time datetime="2026-10-31">31 Oct 2026</time>
-          <h3>150 pull requests in two months for the Haiku fork</h3>
-          <p>The first progress report for Renku OS: 150 merged pull requests from 15 contributors in two months, plus new drivers for Chromebooks, MacBooks and the Raspberry Pi 4.</p>
-          <span class="arrow" aria-hidden="true">↗</span>
-        </a>
-        </div>
-      </div>
-    </section>
-
     <!-- COMMUNITY + DONATE -->
     <section class="community" id="community">
       <div class="wrap community-grid">
@@ -340,6 +313,6 @@ Switched to a new branch 'my-first-verse'
     </div>
   </footer>
 
-  <script src="site.js?v=3" defer></script>
+  <script src="site.js?v=4" defer></script>
 </body>
 </html>
