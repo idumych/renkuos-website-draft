@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Renku OS</title>
+  <meta name="description" content="Download the latest Renku OS nightly, follow recent changes and find the project's developer and community links.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="../assets/seal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#main" aria-label="Renku OS home"><img src="../assets/logo.png" alt="Renku OS" width="600" height="201"></a>
+      <nav aria-label="Main">
+        <a href="#download">Download</a>
+        <a href="#links">Links</a>
+        <a href="#changes">Changes</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="intro">
+      <h1>Renku OS is an open source operating system forked from Haiku.</h1>
+      <p>It keeps the speed and clean C++ API of its BeOS heritage, and welcomes modern tooling, AI-assisted code and contributors of every background.</p>
+    </section>
+
+    <section id="download" class="panel" aria-labelledby="download-title">
+      <div class="panel-head">
+        <h2 id="download-title">Latest nightly</h2>
+        <p class="meta" id="build-meta"><a href="https://github.com/RenkuOS/Source/releases/tag/nightly">See the release page for the current build</a></p>
+      </div>
+      <ul class="downloads">
+        <li data-arch="x86_64">
+          <div class="arch"><b>x86_64</b><span>64-bit.</span></div>
+          <span class="size"></span>
+          <a class="sum" href="https://github.com/RenkuOS/Source/releases/tag/nightly">SHA-256</a>
+          <a class="btn" href="https://github.com/RenkuOS/Source/releases/tag/nightly">Download ISO</a>
+        </li>
+        <li data-arch="x86_gcc2h">
+          <div class="arch"><b>x86_gcc2h</b><span>32-bit. gcc2 for the system, GCC 13 for x86 secondary packages.</span></div>
+          <span class="size"></span>
+          <a class="sum" href="https://github.com/RenkuOS/Source/releases/tag/nightly">SHA-256</a>
+          <a class="btn" href="https://github.com/RenkuOS/Source/releases/tag/nightly">Download ISO</a>
+        </li>
+      </ul>
+      <div class="panel-foot">
+        <p><b>Not a release, so expect breakage.</b> Automated testing only checks that each image boots under emulation without entering the kernel debugger.</p>
+        <p>Verify a download: <code>sha256sum -c RenkuOS-*.iso.sha256</code></p>
+      </div>
+    </section>
+
+    <section id="links" aria-labelledby="links-title">
+      <h2 id="links-title">Links</h2>
+      <div class="link-groups">
+        <nav aria-label="Use">
+          <h3>Use</h3>
+          <ul>
+            <li><a href="https://renkuos.org/software">Software catalog</a></li>
+            <li><a href="https://spritzdepot.desktoponfire.com/">Spritz Depot</a></li>
+            <li><a href="https://github.com/RenkuOS/Source/issues">Report a bug</a></li>
+            <li><a href="https://github.com/RenkuOS/Source/releases/tag/nightly">Nightly release notes</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Develop">
+          <h3>Develop</h3>
+          <ul>
+            <li><a href="https://github.com/RenkuOS/Source">Source code</a></li>
+            <li><a href="https://github.com/RenkuOS/Source/blob/main/ReadMe.Compiling.md">Compiling guide</a></li>
+            <li><a href="https://github.com/RenkuOS/Source/pulls">Pull requests</a></li>
+            <li><a href="https://github.com/RenkuOS/RenkuOSPorts">Package builds (RenkuOSPorts)</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Project">
+          <h3>Project</h3>
+          <ul>
+            <li><a href="https://github.com/RenkuOS/PlanAndGovernance/blob/main/CONTRIBUTING.md">Contributing guide</a></li>
+            <li><a href="https://github.com/RenkuOS/PlanAndGovernance/blob/main/REVIEW.md">Review and governance</a></li>
+            <li><a href="https://github.com/RenkuOS/PlanAndGovernance/blob/main/DECISIONS.md">Decisions</a></li>
+            <li><a href="https://renkuos.org/donate">Donate</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Community">
+          <h3>Community</h3>
+          <ul>
+            <li><a href="https://forum.desktoponfire.com/t/renku-os">Forum</a></li>
+            <li><a href="https://t.me/RenkuOS">Telegram</a></li>
+            <li><a href="https://github.com/RenkuOS">GitHub organization</a></li>
+            <li><a href="https://www.desktoponfire.com/category/renkuos/">News on Desktop on Fire</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <div class="columns">
+      <section id="changes" aria-labelledby="changes-title">
+        <div class="section-head">
+          <h2 id="changes-title">Recent changes</h2>
+          <a href="https://github.com/RenkuOS/Source/pulls?q=is%3Apr+is%3Amerged+sort%3Aupdated-desc">All merged</a>
+        </div>
+        <ul class="rows" id="changes-list">
+          <li><a href="https://github.com/RenkuOS/Source/pulls?q=is%3Apr+is%3Amerged+sort%3Aupdated-desc">See the latest merged pull requests on GitHub</a></li>
+        </ul>
+      </section>
+
+      <section id="news" aria-labelledby="news-title">
+        <div class="section-head">
+          <h2 id="news-title">News</h2>
+          <a href="https://www.desktoponfire.com/category/renkuos/">All posts</a>
+        </div>
+        <ul class="rows">
+          <li>
+            <a href="https://www.desktoponfire.com/renkuos/1035/renkuos-150-pull-requests-haiku-fork/">150 pull requests in two months for the Haiku fork</a>
+            <time datetime="2026-10-31">31 Oct 2026</time>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <h2 id="screenshots-title">Screenshots</h2>
+      <ul class="shots" id="shots">
+        <li><a href="../assets/shots/desktop-1.webp" data-desc="A working day: a spreadsheet, a PDF and the Deskbar, all on the classic BeOS desktop."><img src="../assets/shots/desktop-1-thumb.webp" alt="Renku OS desktop with a spreadsheet, a PDF and the Deskbar" loading="lazy" width="400" height="225"><span>Desktop overview</span></a></li>
+        <li><a href="../assets/shots/display-settings.webp" data-desc="Screen preferences on an NVIDIA Tegra 2 machine, with GLTeapot spinning beside them."><img src="../assets/shots/display-settings-thumb.webp" alt="Screen preferences and GLTeapot on Renku OS" loading="lazy" width="400" height="234"><span>Display settings</span></a></li>
+        <li><a href="../assets/shots/xbox-controller.webp" data-desc="A wireless Xbox controller paired over Bluetooth, with live stick and button input."><img src="../assets/shots/xbox-controller-thumb.webp" alt="Xbox Wireless Controller test window connected over Bluetooth" loading="lazy" width="400" height="234"><span>Xbox controller via Bluetooth</span></a></li>
+        <li><a href="../assets/shots/games-snes.webp" data-desc="A full-screen game launcher running on a small portable machine."><img src="../assets/shots/games-snes-thumb.webp" alt="Photo of a small device showing a SNES game launcher" loading="lazy" width="400" height="225"><span>SNES game launcher</span></a></li>
+        <li><a href="../assets/shots/gobe-productive-1.webp" data-desc="The classic BeOS office suite’s word processor, running on Renku."><img src="../assets/shots/gobe-productive-1-thumb.webp" alt="GoBe Productive word processor" loading="lazy" width="400" height="267"><span>GoBe Productive</span></a></li>
+        <li><a href="../assets/shots/email-views-neo.webp" data-desc="A native mail client with folders, filters and preferences."><img src="../assets/shots/email-views-neo-thumb.webp" alt="EmailViewsNeo mail client" loading="lazy" width="400" height="294"><span>EmailViewsNeo</span></a></li>
+        <li><a href="../assets/shots/powerplay.webp" data-desc="A skinnable media player with a playlist and a ten-band equalizer."><img src="../assets/shots/powerplay-thumb.webp" alt="PowerPlay media player with equalizer and playlist" loading="lazy" width="400" height="192"><span>PowerPlay</span></a></li>
+        <li><a href="../assets/shots/haiku-softphone-2.webp" data-desc="A native SIP softphone sitting on the desktop."><img src="../assets/shots/haiku-softphone-2-thumb.webp" alt="Haiku Softphone on the Renku OS desktop" loading="lazy" width="400" height="234"><span>Haiku Softphone</span></a></li>
+        <li><a href="../assets/shots/desktop-5.webp" data-desc="The Deskbar menu opening preferences, apps and Telegram."><img src="../assets/shots/desktop-5-thumb.webp" alt="Deskbar launcher menu on Renku OS" loading="lazy" width="375" height="400"><span>App launcher</span></a></li>
+      </ul>
+      <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <img id="lb-img" alt="">
+        <div class="lb-bar">
+          <p><b id="lb-title"></b> <span id="lb-desc"></span></p>
+          <button type="button" id="lb-prev">Previous</button>
+          <button type="button" id="lb-next">Next</button>
+          <form method="dialog"><button>Close</button></form>
+        </div>
+      </dialog>
+    </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <div class="about-grid">
+        <div>
+          <h3>Why Renku OS</h3>
+          <p>We love Haiku’s speed, its elegance and its BeOS heritage. We also wanted a home for modern AI and LLM tooling, and a project where contributions of any kind are welcome. AI-assisted code is explicitly allowed, and review and governance are open.</p>
+        </div>
+        <div>
+          <h3>The name</h3>
+          <p><i>Renku</i> (連句) is a Japanese form of collaborative poetry. One poet writes a verse, the next answers it, and the poem keeps moving forward because nobody writes it alone. An operating system grows the same way.</p>
+        </div>
+        <div>
+          <h3>Hardware</h3>
+          <p>Recent nightlies add new drivers, many ported from FreeBSD, OpenBSD and Linux through Renku’s compatibility layers. Current work covers Chromebooks, older MacBooks and early support for the Raspberry Pi 4.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Renku OS Project · Based on Haiku · Connect, Create, Continue</span>
+      <span>Draft redesign, not the official site</span>
+    </div>
+  </footer>
+
+  <script src="site.js" defer></script>
+</body>
+</html>
