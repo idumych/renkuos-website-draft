@@ -4,7 +4,7 @@ A draft of a new landing page for [Renku OS](https://renkuos.org/), the communit
 
 **Live preview:** https://idumych.github.io/renkuos-website-draft/
 
-**Practical version:** https://idumych.github.io/renkuos-website-draft/v2/ (a quieter page built for daily use, in `v2/`;
+**Calmer version:** https://idumych.github.io/renkuos-website-draft/v2/ (the same design with the motion removed, in `v2/`;
 it shares the logo and screenshots in `assets/` and loads the latest nightly and merged pull requests from GitHub).
 
 Design idea: *renku* is Japanese linked-verse poetry, so the page reads like a linked poem.
